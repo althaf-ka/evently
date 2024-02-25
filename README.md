@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Evently
 
-First, run the development server:
+Next.js 14-based events platform for global event management. Effortless ticket purchase via Stripe, empowering users to attend or organize diverse events.
+
+# Tech Stack
+
+- Node.js
+- Next.js
+- TypeScript
+- TailwindCSS
+- Stripe
+- Zod
+- React Hook Form
+- Shadcn
+- Uploadthing
+- Clerk Auth
+
+# Features
+
+#### Authentication (CRUD) with Clerk
+- User management through Clerk, ensuring secure and efficient authentication.
+
+#### Events (CRUD)
+- Users can Create new events, providing essential details such as title, date, location, and additional information.
+
+- Easy access to detailed event information, allowing users to view event specifics such as descriptions, schedules, and related details.
+
+- Empowering users to dynamically modify event details, ensuring accurate and up-to-date information.
+
+- Straightforward process for removing events, giving administrators effective control over platform curation.
+
+#### Related Events
+- Smartly connects related events, displaying them on the event details page for enhanced user engagement.
+
+#### Organized Events
+- Efficient organization of events, ensuring a structured and user-friendly display, such as showing user-created events on the user profile.
+
+#### Search & Filter
+- Robust search and filter system, enabling users to easily find events that match their preferences.
+
+#### New Category
+- Dynamic categorization allows seamless addition of new event categories, keeping the platform adaptable.
+
+#### Checkout and Pay with Stripe
+- Smooth and secure payment transactions using Stripe, enhancing user experience during checkout.
+
+#### Event Orders
+- Comprehensive order management system, providing a clear overview of all event-related transactions.
+
+#### Search Orders
+- Quick and efficient search functionality for orders, facilitating easy tracking and management.
+
+#### Code Architecture and Reusability
+- Structured and reusable code for easy maintenance and updates.
+
+
+## Installation
+
+Follow these steps to set up the project locally on your machine.
+
+**Prerequisites**
+
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+
+
+**Cloning the Repository**
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/althaf-ka/evently
+cd evently
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Install the project dependencies using npm:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+npm install
+```
 
-## Learn More
+**Set Up Environment Variables**
 
-To learn more about Next.js, take a look at the following resources:
+Create a new file named `.env` in the root of your project and add the following content:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```env
+#NEXT
+NEXT_PUBLIC_SERVER_URL=
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#CLERK
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_CLERK_WEBHOOK_SECRET=
 
-## Deploy on Vercel
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#MONGODB
+MONGODB_URI=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+#UPLOADTHING
+UPLOADTHING_SECRET=
+UPLOADTHING_APP_ID=
+
+#STRIPE
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+```
+
+Replace the placeholder values with your actual credentials 
+
+**Running the Project**
+
+```bash
+npm start
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
+
+
+
+    
