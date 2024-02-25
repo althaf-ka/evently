@@ -1,5 +1,5 @@
 import EventForm from "@/components/shared/EventForm";
-import { auth } from "@clerk/nextjs";
+import { RedirectToSignIn, SignedOut, auth } from "@clerk/nextjs";
 
 const CreateEvent = () => {
   const { sessionClaims } = auth();
@@ -15,6 +15,9 @@ const CreateEvent = () => {
       <div className="wrapper my-8">
         <EventForm userId={userId} type="Create" />
       </div>
+      <SignedOut>
+        <RedirectToSignIn />
+      </SignedOut>
     </>
   );
 };
