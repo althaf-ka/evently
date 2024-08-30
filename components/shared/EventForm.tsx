@@ -288,10 +288,10 @@ const EventForm = ({ userId, type, event, eventId }: EventFormProps) => {
                 <FormControl>
                   <div className="flex-center h-[54px] w-full overflow-hidden rounded-full bg-grey-50 px-4 py-2">
                     <Image
-                      src="/assets/icons/dollar.svg"
-                      alt="dollar"
-                      width={24}
-                      height={24}
+                      src="/assets/icons/rupee.svg"
+                      alt="rupee"
+                      width={20}
+                      height={20}
                       className="filter-grey"
                     />
                     <Input
